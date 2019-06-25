@@ -1,0 +1,84 @@
+header {
+	color: white;
+	height: 6.3em;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	.links,
+	.logo,
+	.menu,
+	.menu-icon {
+		height: 100%;
+		position: absolute;
+	}
+	.links,
+	.menu {
+		width: 100%;
+	}
+	.logo,
+	.menu-icon {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		cursor: pointer;
+		top: 0;
+		transition: opacity .25s ease-out;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	.links {
+		align-items: center;
+		display: flex;
+		font-family: roboto, sans-serif;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity .5s ease-out;
+
+		a {
+			font-size: 1.3em;
+			margin: 0 1.7em;
+		}
+	}
+	.logo {
+		background-image: url('../../resources/images/logo.svg');
+		left: 3.8em;
+		width: 5.7em;
+	}
+	.menu {
+		&.open {
+			.links {
+				opacity: 1;
+			}
+		}
+	}
+	.menu-icon {
+		background-image: url('../../resources/images/menu-icon.svg');
+		cursor: pointer;
+		right: 3.8em;
+		width: 1.8em;
+	}
+
+	@media all and (max-width: 1024px) {
+		.links {
+			background-color: black;
+			flex-direction: column;
+			height: 15em;
+			justify-content: space-evenly;
+			opacity: 1;
+			transform: translateY(-100%);
+			transition: transform .5s ease-out;
+		}
+		.menu {
+			&.open {
+				.links {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}

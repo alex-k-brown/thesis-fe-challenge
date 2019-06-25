@@ -1,0 +1,51 @@
+footer {
+	bottom: 0;
+	color: white;
+	font-family: roboto, sans-serif;
+	height: 3.8em;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+
+	.copyright,
+	.links {
+		position: absolute;
+	}
+	.copyright {
+		font-size: .9em;
+		left: 3.8em;
+		line-height: 3.8em;
+	}
+	.links {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		justify-content: space-between;
+		right: 3.8em;
+		top: 0;
+		width: 29.8em;
+
+		a {
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+	}
+
+	@media all and (max-width: 1024px) {
+		padding: 0 0 4em 0;
+
+		.copyright {
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+		}
+		.links {
+			justify-content: space-around;
+			position: absolute;
+			right: 0;
+			width: 100%;
+		}
+	}
+}

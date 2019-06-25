@@ -66,3 +66,320 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+@font-face {
+  font-family: roboto;
+  src: url(../../resources/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url(../../resources/fonts/Roboto-Medium.ttf);
+}
+/* line 1, ../sass/_general.scss */
+html,
+body {
+  background-color: black;
+}
+
+/* line 6, ../sass/_general.scss */
+a {
+  color: white;
+  text-decoration: none;
+  transition: color .25s ease-out;
+}
+/* line 11, ../sass/_general.scss */
+a:hover {
+  color: #9B9B9B;
+}
+
+/* line 1, ../sass/_landing-page.scss */
+.landing-page {
+  background-color: black;
+  background-image: url(../../resources/images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  font-size: 16px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* line 1, ../sass/_header.scss */
+.landing-page header {
+  color: white;
+  height: 6.3em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* line 9, ../sass/_header.scss */
+.landing-page header .links,
+.landing-page header .logo,
+.landing-page header .menu,
+.landing-page header .menu-icon {
+  height: 100%;
+  position: absolute;
+}
+/* line 16, ../sass/_header.scss */
+.landing-page header .links,
+.landing-page header .menu {
+  width: 100%;
+}
+/* line 20, ../sass/_header.scss */
+.landing-page header .logo,
+.landing-page header .menu-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  top: 0;
+  transition: opacity .25s ease-out;
+}
+/* line 29, ../sass/_header.scss */
+.landing-page header .logo:hover,
+.landing-page header .menu-icon:hover {
+  opacity: .7;
+}
+/* line 34, ../sass/_header.scss */
+.landing-page header .links {
+  align-items: center;
+  display: flex;
+  font-family: roboto, sans-serif;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+/* line 42, ../sass/_header.scss */
+.landing-page header .links a {
+  font-size: 1.3em;
+  margin: 0 1.7em;
+}
+/* line 47, ../sass/_header.scss */
+.landing-page header .logo {
+  background-image: url("../../resources/images/logo.svg");
+  left: 3.8em;
+  width: 5.7em;
+}
+/* line 54, ../sass/_header.scss */
+.landing-page header .menu.open .links {
+  opacity: 1;
+}
+/* line 59, ../sass/_header.scss */
+.landing-page header .menu-icon {
+  background-image: url("../../resources/images/menu-icon.svg");
+  cursor: pointer;
+  right: 3.8em;
+  width: 1.8em;
+}
+@media all and (max-width: 1024px) {
+  /* line 67, ../sass/_header.scss */
+  .landing-page header .links {
+    background-color: black;
+    flex-direction: column;
+    height: 15em;
+    justify-content: space-evenly;
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: transform .5s ease-out;
+  }
+  /* line 78, ../sass/_header.scss */
+  .landing-page header .menu.open .links {
+    transform: translateY(0);
+  }
+}
+/* line 1, ../sass/_footer.scss */
+.landing-page footer {
+  bottom: 0;
+  color: white;
+  font-family: roboto, sans-serif;
+  height: 3.8em;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+/* line 10, ../sass/_footer.scss */
+.landing-page footer .copyright,
+.landing-page footer .links {
+  position: absolute;
+}
+/* line 14, ../sass/_footer.scss */
+.landing-page footer .copyright {
+  font-size: .9em;
+  left: 3.8em;
+  line-height: 3.8em;
+}
+/* line 19, ../sass/_footer.scss */
+.landing-page footer .links {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  right: 3.8em;
+  top: 0;
+  width: 29.8em;
+}
+/* line 28, ../sass/_footer.scss */
+.landing-page footer .links a {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+@media all and (max-width: 1024px) {
+  /* line 1, ../sass/_footer.scss */
+  .landing-page footer {
+    padding: 0 0 4em 0;
+  }
+  /* line 37, ../sass/_footer.scss */
+  .landing-page footer .copyright {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  /* line 44, ../sass/_footer.scss */
+  .landing-page footer .links {
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+}
+/* line 1, ../sass/_content.scss */
+.landing-page .content {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  height: calc(100% - 10.1em);
+  justify-content: space-around;
+  overflow: scroll;
+  position: absolute;
+  top: 6.3em;
+  width: 100%;
+}
+/* line 12, ../sass/_content.scss */
+.landing-page .content .lead-gen {
+  color: white;
+  font-family: roboto, sans-serif;
+  width: 28.8em;
+}
+/* line 17, ../sass/_content.scss */
+.landing-page .content .lead-gen form {
+  border: 0.1em solid #979797;
+  border-radius: .2em;
+  margin: 0 0 1.71em;
+  width: 100%;
+}
+/* line 23, ../sass/_content.scss */
+.landing-page .content .lead-gen form input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 0.1em solid #979797;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.13em;
+  line-height: 1.56em;
+  margin: 0;
+  padding: 1em;
+  width: 100%;
+}
+/* line 36, ../sass/_content.scss */
+.landing-page .content .lead-gen form input::placeholder {
+  color: #9B9B9B;
+}
+/* line 40, ../sass/_content.scss */
+.landing-page .content .lead-gen form .submit {
+  background-color: #2C99ED;
+  border-bottom: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* line 46, ../sass/_content.scss */
+.landing-page .content .lead-gen form .submit:hover {
+  background-color: #1B6095;
+}
+/* line 51, ../sass/_content.scss */
+.landing-page .content .lead-gen .by-click,
+.landing-page .content .lead-gen .lead-gen-title,
+.landing-page .content .lead-gen .terms {
+  text-align: center;
+}
+/* line 56, ../sass/_content.scss */
+.landing-page .content .lead-gen .by-click,
+.landing-page .content .lead-gen .terms {
+  font-size: .88em;
+  line-height: 1.71em;
+}
+/* line 62, ../sass/_content.scss */
+.landing-page .content .lead-gen .by-click {
+  color: #9B9B9B;
+}
+/* line 65, ../sass/_content.scss */
+.landing-page .content .lead-gen .lead-gen-title {
+  font-family: roboto-medium, sans-serif;
+  font-size: 1.13em;
+  letter-spacing: .11em;
+  line-height: 1.17em;
+  margin: 0 0 1.17em 0;
+  text-transform: uppercase;
+}
+/* line 73, ../sass/_content.scss */
+.landing-page .content .lead-gen .password-hide {
+  background-image: url("../../resources/images/hide.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  height: 1.1em;
+  margin: -2.5em 0 0 26em;
+  position: absolute;
+  transition: opacity .25s ease-out;
+  width: 1.6em;
+}
+/* line 85, ../sass/_content.scss */
+.landing-page .content .lead-gen .password-hide.hide {
+  opacity: 0;
+}
+/* line 89, ../sass/_content.scss */
+.landing-page .content .lead-gen .terms {
+  display: block;
+}
+/* line 94, ../sass/_content.scss */
+.landing-page .content .text {
+  color: white;
+  width: 29.7em;
+}
+/* line 98, ../sass/_content.scss */
+.landing-page .content .text h1 {
+  font-family: roboto-medium, sans-serif;
+  font-size: 4.8em;
+  letter-spacing: -.06em;
+  line-height: 1.14em;
+}
+/* line 104, ../sass/_content.scss */
+.landing-page .content .text h2 {
+  font-family: roboto, sans-serif;
+  font-size: 1.38em;
+  letter-spacing: -.01em;
+  line-height: 1.55em;
+  margin: 1.14em 0 0;
+}
+@media all and (max-width: 1024px) {
+  /* line 1, ../sass/_content.scss */
+  .landing-page .content {
+    flex-direction: column;
+    height: calc(100% - 13.1em);
+  }
+}
+@media all and (max-width: 1024px) {
+  /* line 1, ../sass/_landing-page.scss */
+  .landing-page {
+    font-size: 11px;
+  }
+}
+@media all and (max-width: 1024px) {
+  /* line 1, ../sass/_landing-page.scss */
+  .landing-page {
+    background-image: url(../../resources/images/bg-mobile.jpg);
+  }
+}

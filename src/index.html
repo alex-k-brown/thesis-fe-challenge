@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="styles/stylesheets/screen.css">
 </head>
@@ -9,40 +10,47 @@
 	<div class="landing-page">
 		<header>
 			<div class="logo"></div>
-			<div class="menu">
-				<ul class="links">
-					<li>About</li>
-					<li>Integrations</li>
-					<li>Pricing</li>
-					<li>Contacts</li>
-				</ul>
+			<div id="menu" class="menu">
+				<div class="links">
+					<a href="#" target="_blank">About</a>
+					<a href="#" target="_blank">Integrations</a>
+					<a href="#" target="_blank">Pricing</a>
+					<a href="#" target="_blank">Contacts</a>
+				</div>
+				<div id="menu-icon" class="menu-icon"></div>
 			</div>
 		</header>
 		<div class="content">
-			<div class="text"></div>
+			<div class="text">
 				<h1>Simple Way to Organize Your Inspirations</h1>
 				<h2>I think what motivates people is not great hate, but great love for other people.</h2>
 			</div>
 			<div class="lead-gen">
+				<div class="lead-gen-title">Sign up for free</div>
 				<div class="form-title"></div>
 				<form>
-					<input type="text" name="name">
-					<input type="text" name="email">
-					<input type="text" name="password">
-					<input type="submit" value="Sign up">
+					<input type="text" name="name" placeholder="Name">
+					<input type="email" name="email" placeholder="E-mail">
+					<input id ="password" type="text" name="password" placeholder="Password">
+					<div id="password-hide" class="password-hide"></div>
+					<input class="submit" type="submit" value="Sign up >">
 				</form>
-				<div class="terms">By clicking "Sign up" I agree to our <span class="highlight">Terms of Service</span></div>
+				<div class="by-click">By clicking "Sign up" I agree to our </div>
+				<a href="#" target="_blank" class="terms"> Terms of Service</a>
 			</div>
 		</div>
 		<footer>
-			<div class="copyright"></div>
-			<ul class="links">
-				<li>Content</li>
-				<li>Help</li>
-				<li>Terms of Use</li>
-				<li>Privacy Policy</li>
-			</ul>
+			<div class="copyright">©2016 Stamp. All rights reserved</div>
+			<div class="links">
+				<a href="#" target="_blank">Contact</a>
+				<a href="#" target="_blank">Help</a>
+				<a href="#" target="_blank">Terms of Use</a>
+				<a href="#" target="_blank">Privacy Policy</a>
+			</div>
 		</footer>
 	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
